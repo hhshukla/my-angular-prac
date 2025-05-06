@@ -1,0 +1,29 @@
+<div class="max-w-[1200px] mx-auto my-12">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-6">
+    <div
+      *ngFor="let card of cardData"
+      class="group relative bg-black shadow-lg rounded-xl overflow-hidden hover:shadow-xl transition-shadow duration-300"
+    >
+      <img
+        [src]="card.imageUrl"
+        alt="card image"
+        class="w-full h-full object-cover"
+      />
+      <!-- Content appears on hover -->
+      <div
+        class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center p-4"
+      >
+        <h3 class="text-lg font-semibold text-white mb-2">
+          {{ card.title }}
+        </h3>
+        <p class="text-sm text-gray-300 mb-4">{{ card.description }}</p>
+        <a
+          href="#"
+          class="mt-4 px-6 py-2 bg-blue-400 border-2 border-blue-500 text-white text-sm sm:text-base uppercase rounded"
+        >
+          {{ card.buttonText }}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

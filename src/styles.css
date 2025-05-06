@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./assets/Styles/light-theme.css";
+@import "./assets/Styles/dark-theme.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'lato', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

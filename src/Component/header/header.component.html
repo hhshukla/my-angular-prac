@@ -1,10 +1,15 @@
-<!-- header.component.html -->
-<div class="bg-black shadow-md">
+<div
+  class="fixed top-0 left-0 w-full z-50 transition-all duration-300"
+  [ngClass]="{
+    'bg-black shadow-md': !isScrolled,
+    'bg-transparent': isScrolled
+  }"
+>
   <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
     <!-- Logo -->
-    <div class="imgWrapper">
-      <img [src]="data.logo.src" [alt]="data.logo.alt" class="h-8 w-auto" />
-    </div>
+    <a class="imgWrapper" href="/">
+      <img [src]="data?.logo?.src" [alt]="data?.logo?.alt" class="h-8 w-auto" />
+    </a>
 
     <!-- Desktop Navigation -->
     <nav class="hidden md:flex space-x-6">
@@ -19,17 +24,18 @@
 
     <!-- Desktop Buttons -->
     <div class="hidden md:flex space-x-2">
-      <button
-        *ngFor="let btn of data.buttons"
-        [ngClass]="btn.style"
+      <a
+        *ngFor="let btn of data?.buttons"
+        [ngClass]="btn?.style || 'bg-blue-600 text-white'"
         class="px-4 py-2 rounded text-sm"
+        href="{{ btn?.url }}"
       >
-        {{ btn.text }}
-      </button>
+        {{ btn?.text }}
+      </a>
     </div>
 
-    <!-- Hamburger for Mobile -->
-    <button class="md:hidden" (click)="toggleMobileMenu()">
+    <!-- Hamburger -->
+    <button class="md:hidden" type="button" (click)="toggleMobileMenu()">
       <svg
         class="h-6 w-6 text-white"
         fill="none"
@@ -46,11 +52,8 @@
     </button>
   </div>
 
-  <!-- Mobile Menu expands header height and pushes content -->
-  <div
-    *ngIf="mobileMenuOpen"
-    class="md:hidden px-4 pb-4 transition-all duration-300"
-  >
+  <!-- Mobile Menu -->
+  <div *ngIf="mobileMenuOpen" class="md:hidden px-4 pb-4">
     <nav class="flex flex-col space-y-2">
       <a
         *ngFor="let link of data?.links"

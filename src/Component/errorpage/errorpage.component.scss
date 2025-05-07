@@ -1,0 +1,18 @@
+.errorpage-main-wrapper{
+  max-width: 100%;
+  text-align: center;
+  .errorpage-img-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .errorpage-link{
+    padding: 14px;
+    background-color: #f0f0f0;
+    color: #000;
+    border-radius: 10px;
+  }
+}
+

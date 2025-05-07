@@ -34,4 +34,5 @@ export class AboutComponent {
         'https://cdn.prod.website-files.com/67061df890aa3a22852e80c7/67061df890aa3a22852e80f3_theo-black.svg',
     },
   ];
+  buttonText = 'Book your spot now';
 }

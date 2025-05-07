@@ -11,6 +11,9 @@ export class BannerComponent {
   title = 'Welcome to the Event of Digital Marketing';
   subtitle = 'Join us for an unforgettable experience';
   imageUrl = '../../../assets/images/banner.png';
-  buttonText = 'Get Started';
+  buttonText = 'Book your spot now';
   buttonUrl = '/signup';
+  subbannertitle = 'arts center, san francisco.';
+  subbannertext =
+    'Join us at Digital Makers, where digital creators unite to innovate, collaborate, and inspire new possibilities..';
 }

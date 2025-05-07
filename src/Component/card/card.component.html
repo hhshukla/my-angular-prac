@@ -1,7 +1,9 @@
 <div class="max-w-[1200px] mx-auto my-12">
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-6">
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-6 md:my-12"
+  >
     <div
-      *ngFor="let card of cardData"
+      *ngFor="let card of cardData.speakers"
       class="group relative bg-black shadow-lg rounded-xl overflow-hidden hover:shadow-xl transition-shadow duration-300"
     >
       <img

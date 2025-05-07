@@ -1,0 +1,33 @@
+<section id="FAQ" class="section">
+  <div class="container">
+    <div class="center-content center-text">
+      <h2>Your questions answered</h2>
+    </div>
+    <div class="faq-split">
+      <div class="faq-column" *ngFor="let column of [0, 1]">
+        <div
+          *ngFor="let faq of faqs.slice(column * 2, column * 2 + 2)"
+          class="faq-accordion"
+        >
+          <div
+            class="accordion-item-trigger"
+            (click)="toggle(faqs.indexOf(faq))"
+          >
+            <img
+              src="https://cdn.prod.website-files.com/67061df890aa3a22852e80c7/67061df890aa3a22852e80fa_white%20accordion.svg"
+              alt="arrow"
+              [style.transform]="faq.isOpen ? 'rotate(180deg)' : 'rotate(0)'"
+            />
+            <div class="faq-question">{{ faq.question }}</div>
+          </div>
+          <div
+            class="accordion-item-content"
+            [style.height]="faq.isOpen ? 'auto' : '0px'"
+          >
+            <div class="answer">{{ faq.answer }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

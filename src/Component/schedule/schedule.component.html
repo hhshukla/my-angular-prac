@@ -1,0 +1,33 @@
+<section id="Schedule">
+  <div class="container">
+    <h2 class="text-2xl md:text-5xl font-bold my-6 uppercase">Schedule</h2>
+
+    <div class="accordion">
+      <div class="accordion-item" *ngFor="let day of schedule; index as i">
+        <div class="accordion-header" (click)="toggle(i)">
+          <h5>{{ day.day }}</h5>
+          <img
+            src="https://cdn.prod.website-files.com/67061df890aa3a22852e80c7/67061df890aa3a22852e80e7_down%20arrow.svg"
+            alt="Toggle Arrow"
+            [style.transform]="
+              openedIndex === i ? 'rotate(180deg)' : 'rotate(0)'
+            "
+          />
+        </div>
+
+        <div class="accordion-content" *ngIf="openedIndex === i">
+          <div class="session" *ngFor="let session of day.sessions">
+            <div class="time">{{ session.time }}</div>
+            <h3>{{ session.title }}</h3>
+            <p>{{ session.description }}</p>
+            <div class="tags" *ngIf="session.tags.length > 0">
+              <span class="tag" *ngFor="let tag of session.tags">{{
+                tag
+              }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

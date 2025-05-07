@@ -1,1 +1,10 @@
-<p>about works!</p>
+<div class="about-wrapper">
+  <h2 class="about-title">{{ title }}</h2>
+  <p class="about-description">{{ description }}</p>
+
+  <ul class="about-list">
+    <li *ngFor="let partner of partners" class="about-list-item">
+      <img [src]="partner?.imageUrl" alt="Partner Logo" />
+    </li>
+  </ul>
+</div>

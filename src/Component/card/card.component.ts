@@ -11,22 +11,22 @@ import { CommonModule } from '@angular/common'; // ✅ Import this
 export class CardComponent implements OnInit {
   cardData = [
     {
-      title: 'Card Title 1',
-      description: 'This is a description for card 1.',
+      title: 'Alex Thompson',
+      description: 'Chief Technology Officer at Innovatech Solutions.',
       imageUrl:
         'https://cdn.prod.website-files.com/67061df890aa3a22852e80c7/67061df890aa3a22852e80e8_speaker%201.png',
       buttonText: 'Learn More',
     },
     {
-      title: 'Card Title 2',
-      description: 'This is a description for card 2.',
+      title: 'Sophia Martinez',
+      description: 'Head of Digital Strategy at Global Media Inc..',
       imageUrl:
         'https://cdn.prod.website-files.com/67061df890aa3a22852e80c7/67061df890aa3a22852e80ea_speaker%202.png',
       buttonText: 'Learn More',
     },
     {
-      title: 'Card Title 3',
-      description: 'This is a description for card 3.',
+      title: 'Michael Chen',
+      description: 'Founder and CEO of Creatify Labs.',
       imageUrl:
         'https://cdn.prod.website-files.com/67061df890aa3a22852e80c7/67061df890aa3a22852e80e9_speaker%203.png',
       buttonText: 'Learn More',

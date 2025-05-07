@@ -4,6 +4,8 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from '../Component/header/header.component';
 import { CardComponent } from '../Component/card/card.component';
 import { BannerComponent } from '../Component/banner/banner.component';
+import { AboutComponent } from '../Component/about/about.component';
+import { FooterComponent } from '../Component/footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +16,8 @@ import { BannerComponent } from '../Component/banner/banner.component';
     HeaderComponent,
     CardComponent,
     BannerComponent,
+    AboutComponent,
+    FooterComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

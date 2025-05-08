@@ -10,6 +10,7 @@ import { FaqsComponent } from '../pages/faqs/faqs.component';
 import { LoginComponent } from '../pages/login/login.component';
 import { SignupComponent } from '../pages/signup/signup.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BooknowComponent } from '../pages/booknow/booknow.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent }, // ✅ Home page
@@ -20,14 +21,12 @@ export const routes: Routes = [
   { path: 'faq', component: FaqsComponent },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
+  { path: 'booknow', component: BooknowComponent },
   { path: '**', component: ErrorpageComponent }, // ✅ 404 page
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes),
-    ReactiveFormsModule, // ✅ Add this line
-  ],
+  imports: [RouterModule.forRoot(routes), ReactiveFormsModule],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

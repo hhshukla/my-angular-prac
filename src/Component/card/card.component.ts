@@ -39,7 +39,6 @@ export class CardComponent implements OnInit {
   constructor(private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {
-    console.log(this.cardData);
     this.cdr.detectChanges();
   }
 }

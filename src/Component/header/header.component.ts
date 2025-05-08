@@ -56,11 +56,6 @@ export class HeaderComponent {
         url: '/signup',
         style: 'primary',
       },
-      {
-        text: 'Login',
-        url: '/login',
-        style: 'secondary',
-      },
     ],
   };
   // Inject the ThemeService

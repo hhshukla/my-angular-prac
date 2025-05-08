@@ -1,1 +1,83 @@
-<p>contact works!</p>
+<div class="booking-container">
+  <h2>Booking Flow</h2>
+
+  <!-- Step 1: Form -->
+  <form
+    *ngIf="step === 1"
+    [formGroup]="bookingForm"
+    (ngSubmit)="nextStep()"
+    class="text-black"
+  >
+    <div class="form-group">
+      <label>Name</label>
+      <input
+        name="name"
+        type="text"
+        autocomplete="name"
+        formControlName="name"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>Email</label>
+      <input
+        name="email"
+        type="email"
+        autocomplete="email"
+        formControlName="email"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>Phone</label>
+      <input
+        name="phone"
+        type="tel"
+        autocomplete="tel"
+        formControlName="phone"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>Start Date</label>
+      <input
+        name="startDate"
+        type="date"
+        autocomplete="on"
+        formControlName="startDate"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>End Date</label>
+      <input
+        name="endDate"
+        type="date"
+        autocomplete="on"
+        formControlName="endDate"
+      />
+    </div>
+
+    <button type="submit">Next</button>
+  </form>
+
+  <!-- Step 2: Confirmation -->
+  <div *ngIf="step === 2" class="confirmation">
+    <h3>Confirm your booking</h3>
+    <p><strong>Name:</strong> {{ bookingForm.value.name }}</p>
+    <p><strong>Email:</strong> {{ bookingForm.value.email }}</p>
+    <p><strong>Phone:</strong> {{ bookingForm.value.phone }}</p>
+    <p><strong>Start Date:</strong> {{ bookingForm.value.startDate }}</p>
+    <p><strong>End Date:</strong> {{ bookingForm.value.endDate }}</p>
+
+    <button (click)="confirmBooking()">Confirm</button>
+    <button class="secondary" (click)="step = 1">Back</button>
+  </div>
+
+  <!-- Step 3: Success -->
+  <div *ngIf="step === 3" class="success">
+    <h3>Booking Confirmed!</h3>
+    <p>Thank you for booking with us.</p>
+    <button (click)="reset()">Book Another</button>
+  </div>
+</div>

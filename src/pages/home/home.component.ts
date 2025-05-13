@@ -4,6 +4,8 @@ import { AboutComponent } from '../../Component/about/about.component';
 import { ContentblockComponent } from '../../Component/contentblock/contentblock.component';
 import { TestimonialComponent } from '../../Component/testimonial/testimonial.component';
 import { BannerComponent } from '../../Component/banner/banner.component';
+import { PricingComponent } from '../../Component/pricing/pricing.component';
+import { ImageSliderComponent } from '../../Component/image-slider/image-slider.component';
 
 @Component({
   selector: 'app-home',
@@ -14,6 +16,8 @@ import { BannerComponent } from '../../Component/banner/banner.component';
     AboutComponent,
     ContentblockComponent,
     TestimonialComponent,
+    PricingComponent,
+    ImageSliderComponent,
   ],
   templateUrl: './home.component.html',
 })

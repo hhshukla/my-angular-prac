@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="center-content">
+    <div class="limit">
+      <h2>Pricing plans</h2>
+      <p class="medium-text">
+        Choose one of three available ticket tiers, all of which are available
+        for purchase when you reach out.
+      </p>
+    </div>
+  </div>
+
+  <div class="three-column-grid">
+    <div class="pricing-card" *ngFor="let plan of pricingPlans">
+      <div class="pricing-top">
+        <div class="pricing-head">
+          <div class="title">makers conf 2024</div>
+        </div>
+        <div class="pricing-card-content">
+          <div>
+            <h3>{{ plan.title }}</h3>
+            <p>{{ plan.description }}</p>
+          </div>
+          <div class="price">
+            <span class="opacity-white-text">$</span> {{ plan.price }}
+          </div>
+        </div>
+      </div>
+      <a href="#Sign-up" class="pricing-card-button">Sign up now</a>
+    </div>
+  </div>
+</div>

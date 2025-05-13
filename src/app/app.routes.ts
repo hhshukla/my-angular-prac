@@ -11,6 +11,8 @@ import { LoginComponent } from '../pages/login/login.component';
 import { SignupComponent } from '../pages/signup/signup.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BooknowComponent } from '../pages/booknow/booknow.component';
+import { PricingComponent } from '../Component/pricing/pricing.component';
+import { ImageSliderComponent } from '../Component/image-slider/image-slider.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent }, // ✅ Home page
@@ -23,6 +25,8 @@ export const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'booknow', component: BooknowComponent },
   { path: '**', component: ErrorpageComponent }, // ✅ 404 page
+  { path: 'pricing', component: PricingComponent }, // ✅ Pricing page
+  { path: 'imgeslider', component: ImageSliderComponent },
 ];
 
 @NgModule({
